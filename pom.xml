@@ -34,6 +34,7 @@
 		<spring-cloud.version>2023.0.3</spring-cloud.version>
 	</properties>
 	<modules>
+		<module>ms-discovery-server</module>
 		<module>ms-gateway</module>
 		<module>ms-inventory</module>
 		<module>ms-orders</module>
@@ -59,5 +60,14 @@
 
 		</plugins>
 	</build>
-
+	<repositories>
+		<repository>
+			<id>netflix-candidates</id>
+			<name>Netflix Candidates</name>
+			<url>https://artifactory-oss.prod.netflix.net/artifactory/maven-oss-candidates</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
 </project>

@@ -8,10 +8,10 @@
 		<version>1.0.0-SNAPSHOT</version>
 	</parent>
 
-	<artifactId>ms-gateway</artifactId>
+	<artifactId>ms-discovery-server</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>ms-gateway</name>
-	<description>My Gateway for MS Examples</description>
+	<name>ms-discovery-server</name>
+	<description>Discovery Server Eureka</description>
 	<url/>
 	<licenses>
 		<license/>
@@ -31,12 +31,9 @@
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-gateway</artifactId>
+			<artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
 		</dependency>
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>

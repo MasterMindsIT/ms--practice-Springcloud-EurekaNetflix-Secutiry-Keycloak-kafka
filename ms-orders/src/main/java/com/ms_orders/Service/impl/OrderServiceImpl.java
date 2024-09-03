@@ -22,9 +22,10 @@ public class OrderServiceImpl implements IOrderService {
     private final WebClient.Builder webClientBuilder;
     @Override
     public void placeOrder(OrderRequest orderRequest) {
+        log.warn("Ingresando ");
         BaseResponse result = this.webClientBuilder.build()
                 .post()
-                .uri("http://localhost:8083/api/inventories/in-stock")
+                .uri("lb://ms-inventory/api/inventories/in-stock")
                 .bodyValue(orderRequest.getOrderItems())
                 .retrieve()
                 .bodyToMono(BaseResponse.class)
